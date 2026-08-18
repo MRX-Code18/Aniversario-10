@@ -231,7 +231,7 @@
 
     .side-notes-img {
       width: 100%;
-      height: 110px;
+      height: 130px;
       background: rgba(255,255,255,0.05);
       border: 1px dashed rgba(255, 255, 255, 0.2);
       border-radius: 8px;
@@ -244,7 +244,14 @@
       margin-bottom: 8px;
     }
 
-    .side-notes-img img { width: 100%; height: 100%; object-fit: cover; }
+    .side-notes-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
     .side-notes-text { font-size: 11px; color: #dcdde1; line-height: 1.5; }
 
     .slot-center-content {
@@ -607,21 +614,26 @@
       justify-content: center;
     }
 
+    /* AJUSTES RESPONSIVOS DE IMÁGENES / POLAROID */
     .photo-polaroid {
       background: #ffffff;
-      padding: 8px 8px 20px 8px;
-      border-radius: 6px;
+      padding: 10px 10px 22px 10px;
+      border-radius: 8px;
       box-shadow: 0 15px 35px rgba(0,0,0,0.6);
       transform: rotate(2deg);
       width: 100%;
-      max-width: 250px;
+      max-width: 290px;
       text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .photo-polaroid:hover {
+      transform: rotate(0deg) scale(1.02);
     }
 
     .photo-img {
       width: 100%;
-      height: 190px;
-      object-fit: cover;
+      aspect-ratio: 4 / 3;
       border-radius: 4px;
       background: #1e1e2d;
       display: flex;
@@ -630,10 +642,31 @@
       color: #718093;
       font-size: 11px;
       overflow: hidden;
+      position: relative;
     }
 
-    .photo-img img { width: 100%; height: 100%; object-fit: cover; }
-    .photo-caption { margin-top: 8px; font-family: 'Playfair Display', serif; font-size: 13px; color: #2f3542; font-style: italic; }
+    .photo-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .photo-img img:hover {
+      transform: scale(1.05);
+    }
+
+    .photo-caption {
+      margin-top: 10px;
+      font-family: 'Playfair Display', serif;
+      font-size: 13px;
+      color: #2f3542;
+      font-style: italic;
+      line-height: 1.3;
+      padding: 0 4px;
+    }
 
     .update-banner-box {
       display: none;
@@ -884,9 +917,23 @@
         gap: 14px;
       }
 
-      .card-right { order: -1; }
-      .photo-polaroid { max-width: 200px; padding-bottom: 14px; }
-      .photo-img { height: 140px; }
+      .card-right { 
+        order: -1; 
+        width: 100%;
+      }
+
+      .photo-polaroid { 
+        max-width: 240px; 
+        padding: 8px 8px 16px 8px;
+        transform: none; 
+      }
+      
+      .photo-img { 
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        max-height: 220px;
+      }
+
       .year-glow-title { font-size: 40px; }
       .slot-viewport { width: 280px; height: 110px; }
       .slot-item { height: 55px; font-size: 19px; }
