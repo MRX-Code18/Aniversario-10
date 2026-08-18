@@ -896,14 +896,12 @@
 </head>
 <body>
 
-  <!-- Fondo animado -->
   <section class="starfield" id="starfield">
     <div class="comet" style="top: 15%; animation-delay: 0s;"></div>
     <div class="comet" style="top: 45%; animation-delay: 2.2s;"></div>
     <div class="comet" style="top: 70%; animation-delay: 3.5s;"></div>
   </section>
 
-  <!-- PANTALLA 1: IDE / TERMINAL -->
   <div class="view-container active" id="view-ide">
     <div class="ide-window">
       <div class="ide-header">
@@ -939,11 +937,9 @@
     </div>
   </div>
 
-  <!-- PANTALLA 2: RULETA / INICIO CON CASILLA LATERAL -->
   <div class="view-container" id="view-slot">
     <div class="slot-machine-container">
       
-      <!-- CASILLA DE NOTAS DE LA ACTUALIZACIÓN -->
       <div class="side-notes-box">
         <div class="side-notes-tag">📌 Notas de la siguiente actualización</div>
         <div class="side-notes-img" id="sideNoteImgSlot">
@@ -954,7 +950,6 @@
         </div>
       </div>
 
-      <!-- CENTRO: FUEGO Y MESES -->
       <div class="slot-center-content">
         <div class="fire-year-container">
           <div class="flame-box">
@@ -976,11 +971,9 @@
     </div>
   </div>
 
-  <!-- PANTALLA 3: TIMELINE (HISTORIA MES A MES) -->
   <div class="view-container" id="view-timeline">
     <div class="timeline-view" id="timelineTouchArea">
       
-      <!-- BARRA SUPERIOR -->
       <div class="timeline-header">
         <div class="header-actions">
           <button class="btn-header-chip" onclick="returnToSlotMenu()" title="Volver al menú inicial">
@@ -1002,7 +995,6 @@
         </div>
       </div>
 
-      <!-- TARJETA + CONTROLES VERTICALES -->
       <div class="timeline-card-wrapper">
         <div class="timeline-card">
           <div class="card-left">
@@ -1032,7 +1024,6 @@
           </div>
         </div>
 
-        <!-- FLECHAS VERTICALES DE NAVEGACIÓN -->
         <div class="vertical-nav-controls">
           <button class="v-nav-btn" id="btnVPrev" onclick="changeMonth(-1)" title="Subir al mes anterior">
             ▲ <span>ANTERIOR</span>
@@ -1046,7 +1037,6 @@
     </div>
   </div>
 
-  <!-- SELECTOR DE MESES (MODAL DE LA "X") -->
   <div class="modal-month-selector" id="monthSelectorModal">
     <div class="selector-card">
       <button class="btn-close-selector" onclick="closeMonthSelector()">✕</button>
@@ -1057,7 +1047,6 @@
     </div>
   </div>
 
-  <!-- MODAL DE NOTAS DE PARCHE -->
   <div class="modal-patch" id="patchModal">
     <div class="patch-card">
       <span class="patch-badge">Actualización de Amor v1.2</span>
@@ -1073,7 +1062,6 @@
     </div>
   </div>
 
-  <!-- REPRODUCTOR DE MÚSICA PLEGABLE -->
   <div class="music-panel" id="musicPanel">
     <button class="music-toggle-btn" onclick="toggleMusicPanel()" title="Menú de Música">🎵</button>
     <div class="music-controls" id="musicControls">
@@ -1114,8 +1102,8 @@
        ========================================================================== */
     const playlist = [
       {
-        title: "Melodía Acústica Romántica",
-        url: ""
+        title: "Nuestra Canción",
+        url: "music/music1.mp3"
       }
     ];
     let currentSongIndex = 0;
@@ -1130,7 +1118,7 @@
         year: 2025,
         dateString: "18/10/2025",
         title: "Capítulo 1: El Inicio de Nuestro Universo",
-        text: "no se que poner",
+        text: "no se que",
         photoText: "Nuestra primera foto juntos 📸",
         imageSrc: ""
       },
@@ -1591,4 +1579,3 @@
   </script>
 </body>
 </html>
-
